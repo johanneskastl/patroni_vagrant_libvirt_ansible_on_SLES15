@@ -1,3 +1,6 @@
 [submodule "ansible/roles/bind9_simple_authoritative_dns_server"]
 	path = ansible/roles/bind9_simple_authoritative_dns_server
 	url = https://github.com/johanneskastl/ansible-role-bind9_simple_authoritative_dns_server.git
+[submodule "ansible/roles/configure_etc_resolv_conf"]
+	path = ansible/roles/configure_etc_resolv_conf
+	url = https://github.com/johanneskastl/ansible-role-configure_etc_resolv_conf.git

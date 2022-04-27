@@ -133,3 +133,6 @@
 [submodule "ansible/roles/create_caasp_skuba_bootstrap_script"]
 	path = ansible/roles/create_caasp_skuba_bootstrap_script
 	url = https://github.com/johanneskastl/ansible-role-create_caasp_skuba_bootstrap_script.git
+[submodule "ansible/roles/create_rke_cluster_yml"]
+	path = ansible/roles/create_rke_cluster_yml
+	url = https://github.com/johanneskastl/ansible-role-create_rke_cluster_yml.git

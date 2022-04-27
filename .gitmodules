@@ -10,3 +10,6 @@
 [submodule "ansible/roles/configure_kerberos_kdcs"]
 	path = ansible/roles/configure_kerberos_kdcs
 	url = https://github.com/johanneskastl/ansible-role-configure_kerberos_kdcs.git
+[submodule "ansible/roles/create_a_vimrc"]
+	path = ansible/roles/create_a_vimrc
+	url = https://github.com/johanneskastl/ansible-role-create_a_vimrc.git

@@ -253,3 +253,6 @@
 [submodule "ansible/roles/openmediavault_lets_encrypt_certificate"]
 	path = ansible/roles/openmediavault_lets_encrypt_certificate
 	url = https://github.com/johanneskastl/ansible-role-openmediavault_lets_encrypt_certificate.git
+[submodule "ansible/roles/prepare_SUSE_HA_clusternode"]
+	path = ansible/roles/prepare_SUSE_HA_clusternode
+	url = https://github.com/johanneskastl/ansible-role-prepare_SUSE_HA_clusternode.git

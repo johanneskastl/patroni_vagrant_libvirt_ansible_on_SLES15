@@ -70,3 +70,6 @@
 [submodule "ansible/roles/set_ntp_servers_for_chrony"]
 	path = ansible/roles/set_ntp_servers_for_chrony
 	url = https://github.com/johanneskastl/ansible-role-set_ntp_servers_for_chrony.git
+[submodule "ansible/roles/simple_ssh_config"]
+	path = ansible/roles/simple_ssh_config
+	url = https://github.com/johanneskastl/ansible-role-simple_ssh_config.git

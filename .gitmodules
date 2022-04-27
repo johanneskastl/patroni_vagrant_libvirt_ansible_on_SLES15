@@ -13,3 +13,6 @@
 [submodule "ansible/roles/create_a_vimrc"]
 	path = ansible/roles/create_a_vimrc
 	url = https://github.com/johanneskastl/ansible-role-create_a_vimrc.git
+[submodule "ansible/roles/create_krb5_conf"]
+	path = ansible/roles/create_krb5_conf
+	url = https://github.com/johanneskastl/ansible-role-create_krb5_conf.git

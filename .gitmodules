@@ -121,3 +121,6 @@
 [submodule "ansible/roles/configure_and_start_teleport"]
 	path = ansible/roles/configure_and_start_teleport
 	url = https://github.com/johanneskastl/ansible-role-configure_and_start_teleport.git
+[submodule "ansible/roles/configure_eth1_with_dhcp"]
+	path = ansible/roles/configure_eth1_with_dhcp
+	url = https://github.com/johanneskastl/ansible-role-configure_eth1_with_dhcp.git

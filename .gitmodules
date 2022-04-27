@@ -130,3 +130,6 @@
 [submodule "ansible/roles/configure_systemd-resolved"]
 	path = ansible/roles/configure_systemd-resolved
 	url = https://github.com/johanneskastl/ansible-role-configure_systemd-resolved.git
+[submodule "ansible/roles/create_caasp_skuba_bootstrap_script"]
+	path = ansible/roles/create_caasp_skuba_bootstrap_script
+	url = https://github.com/johanneskastl/ansible-role-create_caasp_skuba_bootstrap_script.git

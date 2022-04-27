@@ -295,3 +295,6 @@
 [submodule "ansible/roles/set_hostname"]
 	path = ansible/roles/set_hostname
 	url = https://github.com/johanneskastl/ansible-role-set_hostname.git
+[submodule "ansible/roles/set_root_password"]
+	path = ansible/roles/set_root_password
+	url = https://github.com/johanneskastl/ansible-role-set_root_password.git

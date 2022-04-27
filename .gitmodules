@@ -58,3 +58,6 @@
 [submodule "ansible/roles/samba4_ad_client_sssd"]
 	path = ansible/roles/samba4_ad_client_sssd
 	url = https://github.com/johanneskastl/ansible-role-samba4_ad_client_sssd.git
+[submodule "ansible/roles/samba4_ad_first_dc_rsync"]
+	path = ansible/roles/samba4_ad_first_dc_rsync
+	url = https://github.com/johanneskastl/ansible-role-samba4_ad_first_dc_rsync.git

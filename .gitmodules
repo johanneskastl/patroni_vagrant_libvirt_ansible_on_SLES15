@@ -280,3 +280,6 @@
 [submodule "ansible/roles/samba4_ad_domaincontroller"]
 	path = ansible/roles/samba4_ad_domaincontroller
 	url = https://github.com/johanneskastl/ansible-role-samba4_ad_domaincontroller.git
+[submodule "ansible/roles/set_SELINUX_to_disabled"]
+	path = ansible/roles/set_SELINUX_to_disabled
+	url = https://github.com/johanneskastl/ansible-role-set_SELINUX_to_disabled.git

@@ -4,3 +4,6 @@
 [submodule "ansible/roles/configure_etc_resolv_conf"]
 	path = ansible/roles/configure_etc_resolv_conf
 	url = https://github.com/johanneskastl/ansible-role-configure_etc_resolv_conf.git
+[submodule "ansible/roles/configure_kerberos_clients"]
+	path = ansible/roles/configure_kerberos_clients
+	url = https://github.com/johanneskastl/ansible-role-configure_kerberos_clients.git

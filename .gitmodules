@@ -244,3 +244,6 @@
 [submodule "ansible/roles/mail_after_reboot"]
 	path = ansible/roles/mail_after_reboot
 	url = https://github.com/johanneskastl/ansible-role-mail_after_reboot.git
+[submodule "ansible/roles/netdata-agent"]
+	path = ansible/roles/netdata-agent
+	url = https://github.com/johanneskastl/ansible-role-netdata-agent.git

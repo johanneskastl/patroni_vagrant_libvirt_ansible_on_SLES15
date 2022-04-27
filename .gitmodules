@@ -46,3 +46,6 @@
 [submodule "ansible/roles/mount_ebpf"]
 	path = ansible/roles/mount_ebpf
 	url = https://github.com/johanneskastl/ansible-role-mount_ebpf.git
+[submodule "ansible/roles/nfs_client_using_kerberos"]
+	path = ansible/roles/nfs_client_using_kerberos
+	url = https://github.com/johanneskastl/ansible-role-nfs_client_using_kerberos.git

@@ -28,3 +28,6 @@
 [submodule "ansible/roles/glusterfs_servers"]
 	path = ansible/roles/glusterfs_servers
 	url = https://github.com/johanneskastl/ansible-role-glusterfs_servers.git
+[submodule "ansible/roles/install_nfs_client_packages"]
+	path = ansible/roles/install_nfs_client_packages
+	url = https://github.com/johanneskastl/ansible-role-install_nfs_client_packages.git

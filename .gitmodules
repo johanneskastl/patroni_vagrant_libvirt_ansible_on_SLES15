@@ -235,3 +235,6 @@
 [submodule "ansible/roles/k3s_configure_private_registries"]
 	path = ansible/roles/k3s_configure_private_registries
 	url = https://github.com/johanneskastl/ansible-role-k3s_configure_private_registries.git
+[submodule "ansible/roles/lego_acme-client"]
+	path = ansible/roles/lego_acme-client
+	url = https://github.com/johanneskastl/ansible-role-lego_acme-client.git

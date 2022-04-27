@@ -16,3 +16,6 @@
 [submodule "ansible/roles/create_krb5_conf"]
 	path = ansible/roles/create_krb5_conf
 	url = https://github.com/johanneskastl/ansible-role-create_krb5_conf.git
+[submodule "ansible/roles/deploy_rancher_on_k3s"]
+	path = ansible/roles/deploy_rancher_on_k3s
+	url = https://github.com/johanneskastl/ansible-role-deploy_rancher_on_k3s.git

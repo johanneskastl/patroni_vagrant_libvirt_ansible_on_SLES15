@@ -199,3 +199,6 @@
 [submodule "ansible/roles/install_net-snmp_packages"]
 	path = ansible/roles/install_net-snmp_packages
 	url = https://github.com/johanneskastl/ansible-role-install_net-snmp_packages.git
+[submodule "ansible/roles/install_nfsserver_packages"]
+	path = ansible/roles/install_nfsserver_packages
+	url = https://github.com/johanneskastl/ansible-role-install_nfsserver_packages.git

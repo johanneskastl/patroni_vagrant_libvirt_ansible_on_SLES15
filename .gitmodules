@@ -109,3 +109,6 @@
 [submodule "ansible/roles/add_zypper_repository"]
 	path = ansible/roles/add_zypper_repository
 	url = https://github.com/johanneskastl/ansible-role-add_zypper_repository.git
+[submodule "ansible/roles/bootstrap_python_on_OpenWRT"]
+	path = ansible/roles/bootstrap_python_on_OpenWRT
+	url = https://github.com/johanneskastl/ansible-role-bootstrap_python_on_OpenWRT.git

@@ -250,3 +250,6 @@
 [submodule "ansible/roles/netdata-server"]
 	path = ansible/roles/netdata-server
 	url = https://github.com/johanneskastl/ansible-role-netdata-server.git
+[submodule "ansible/roles/openmediavault_lets_encrypt_certificate"]
+	path = ansible/roles/openmediavault_lets_encrypt_certificate
+	url = https://github.com/johanneskastl/ansible-role-openmediavault_lets_encrypt_certificate.git

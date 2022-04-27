@@ -124,3 +124,6 @@
 [submodule "ansible/roles/configure_eth1_with_dhcp"]
 	path = ansible/roles/configure_eth1_with_dhcp
 	url = https://github.com/johanneskastl/ansible-role-configure_eth1_with_dhcp.git
+[submodule "ansible/roles/configure_net-snmp_agent"]
+	path = ansible/roles/configure_net-snmp_agent
+	url = https://github.com/johanneskastl/ansible-role-configure_net-snmp_agent.git

@@ -301,3 +301,6 @@
 [submodule "ansible/roles/setup_sssd_as_client_for_389_server"]
 	path = ansible/roles/setup_sssd_as_client_for_389_server
 	url = https://github.com/johanneskastl/ansible-role-setup_sssd_as_client_for_389_server.git
+[submodule "ansible/roles/suse-ses-prepare_admin_node"]
+	path = ansible/roles/suse-ses-prepare_admin_node
+	url = https://github.com/johanneskastl/ansible-role-suse-ses-prepare_admin_node.git

@@ -1,0 +1,3 @@
+[submodule "ansible/roles/bind9_simple_authoritative_dns_server"]
+	path = ansible/roles/bind9_simple_authoritative_dns_server
+	url = https://github.com/johanneskastl/ansible-role-bind9_simple_authoritative_dns_server.git

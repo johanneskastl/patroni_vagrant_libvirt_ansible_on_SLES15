@@ -1,0 +1,29 @@
+#
+# {{ ansible_managed }}
+#
+global
+    maxconn 100
+
+defaults
+    log global
+    mode tcp
+    retries 2
+    timeout client 30m
+    timeout connect 4s
+    timeout server 30m
+    timeout check 5s
+
+listen stats
+    mode http
+    bind *:7000
+    stats enable
+    stats uri /
+
+listen postgres
+    bind *:5000
+    option httpchk
+    http-check expect status 200
+    default-server inter 3s fall 3 rise 2 on-marked-down shutdown-sessions
+{% for backend in groups['patroni_nodes']%}
+    server postgresql_{{ hostvars[backend]['ansible_hostname'] }} {{ hostvars[backend]['ansible_default_ipv4']['address'] }}:5432 maxconn 100 check port 8008
+{% endfor %}

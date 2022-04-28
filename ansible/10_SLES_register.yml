@@ -23,4 +23,4 @@
         - product: 'sle-module-web-scripting'
         - product: 'sle-module-desktop-applications'
         - product: 'sle-module-development-tools'
-        - product: 'PackageHub/15.3/x86_64'
+        - product: 'PackageHub'

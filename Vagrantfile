@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
 
     # which image to use
     node.vm.box = "SLE15-SP3"
+    node.vm.box_check_update = false
 
     # sizing of the VMs
     node.vm.provider "libvirt" do |lv|
@@ -34,6 +35,7 @@ Vagrant.configure("2") do |config|
 
       # which image to use
       node.vm.box = "SLE15-SP3"
+      node.vm.box_check_update = false
 
       # sizing of the VMs
       node.vm.provider "libvirt" do |lv|
@@ -60,6 +62,7 @@ Vagrant.configure("2") do |config|
 
       # which image to use
       node.vm.box = "SLE15-SP3"
+      node.vm.box_check_update = false
 
       # sizing of the VMs
       node.vm.provider "libvirt" do |lv|

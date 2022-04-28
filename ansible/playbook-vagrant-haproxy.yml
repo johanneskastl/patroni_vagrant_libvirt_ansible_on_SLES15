@@ -9,32 +9,16 @@
   become: 'true'
 
   roles:
-    - role: 'install_one_or_more_packages'
+    - role: 'install_and_configure_haproxy'
       vars:
-        packages_to_be_installed:
-          - 'haproxy'
-
-  tasks:
-
-    - name: 'Create /etc/haproxy/haproxy.cfg'
-      template:
-        src: 'etc_haproxy_haproxy.cfg.j2'
-        dest: '/etc/haproxy/haproxy.cfg'
-        owner: 'root'
-        group: 'root'
-        mode: '0600'
-      notify:
-        - 'restart haproxy'
-
-    - name: 'Start and enable haproxy'
-      service:
-        name: 'haproxy.service'
-        state: 'started'
-        enabled: 'true'
-
-  handlers:
-
-    - name: 'restart haproxy'
-      ansible.builtin.service:
-        name: 'haproxy.service'
-        state: 'restarted'
+        destinations:
+          - type: 'simple'
+            name: 'postgres'
+            port: '5000'
+            option: 'httpchk'
+            option_configuration: 'expect status 200'
+            default_server: 'inter 3s fall 3 rise 2 on-marked-down shutdown-sessions'
+            backend_options: 'maxconn 100 check port 8008'
+            backend_prefix: 'postgresql_'
+            backend_port: '5432'
+            backends_group: 'patroni_nodes'

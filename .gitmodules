@@ -331,3 +331,6 @@
 [submodule "helpers"]
 	path = helpers
 	url = https://github.com/johanneskastl/helpers.git
+[submodule "ansible/roles/install_and_configure_etcd"]
+	path = ansible/roles/install_and_configure_etcd
+	url = https://github.com/johanneskastl/ansible-role-install_and_configure_etcd.git

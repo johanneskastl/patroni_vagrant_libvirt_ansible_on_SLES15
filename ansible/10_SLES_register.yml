@@ -24,3 +24,4 @@
         - product: 'sle-module-desktop-applications'
         - product: 'sle-module-development-tools'
         - product: 'PackageHub'
+        - product: 'sle-module-legacy'

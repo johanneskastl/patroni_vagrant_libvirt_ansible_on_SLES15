@@ -20,7 +20,6 @@
       vars:
         packages_to_be_installed:
           - 'hostname'
-          - 'zypper-search-packages-plugin'
     - role: 'minimal_bashrc'
       vars:
         additional_users: "{{ ansible_user }}"

@@ -14,7 +14,7 @@ Default OS is SLES15 SP3, but that can be changed in the Vagrantfile. Please bew
 4. Create a file `ansible/group_vars/all/SUSE_LICENSE_KEY.yml` containing a variable called `suse_license_key`, set to your SUSE SLES registration key. The file is ignored by git and will not get commited (unless you do something stupid...)
 5. Add another variable `suse_ha_license_key` to the file `ansible/group_vars/all/SUSE_LICENSE_KEY.yml`, this time this is the registration code for the SUSE HA extension (which is needed for haproxy)
 6. Run `vagrant up`
-7. Open the haproxy node's IP address on port 7000 to visit the haproxy statistics, including your postgresql backend.
+7. Open the haproxy node's IP address on port 80 to visit the haproxy statistics, including your postgresql backend.
 8. Party!
 
 ## Disabling the Ansible provisioning

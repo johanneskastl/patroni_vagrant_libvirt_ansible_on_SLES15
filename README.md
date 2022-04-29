@@ -11,9 +11,11 @@ Default OS is SLES15 SP3, but that can be changed in the Vagrantfile. Please bew
 1. You need vagrant obviously. And ansible. And git...
 2. Fetch the box from [Suse](https://www.suse.com/download/sles/) by following the instructions on the page (TL;DR: download, `vagrant box add --name SLE15-SP3 SLE*Vagrant*.box`, done)
 3. Make sure the git submodules are fully working by issuing `git submodule init && git submodule update`
-4. Run `vagrant up`
-5. Open the haproxy node's IP address on port 7000 to visit the haproxy statistics, including your postgresql backend.
-6. Party!
+4. Create a file `ansible/group_vars/all/SUSE_LICENSE_KEY.yml` containing a variable called `suse_license_key`, set to your SUSE SLES registration key. The file is ignored by git and will not get commited (unless you do something stupid...)
+5. Add another variable `suse_ha_license_key` to the file `ansible/group_vars/all/SUSE_LICENSE_KEY.yml`, this time this is the registration code for the SUSE HA extension (which is needed for haproxy)
+6. Run `vagrant up`
+7. Open the haproxy node's IP address on port 7000 to visit the haproxy statistics, including your postgresql backend.
+8. Party!
 
 ## Disabling the Ansible provisioning
 
@@ -31,3 +33,7 @@ In case you do not want Ansible to install teleport (because you want to install
 
         end # node.vm.provision
 ```
+
+## Cleaning up
+
+In case you want to destroy the VMs and start from scratch, it might be a good idea to deregister the VMs. Running `ansible-playbook 90_SLES_deregister.yml` from inside the `ansible` directory should do the trick.

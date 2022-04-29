@@ -9,71 +9,26 @@
   become: 'true'
 
   roles:
-    - role: 'add_zypper_repository'
+    - role: 'patroni_postgresql_cluster'
       vars:
-        repository_name: 'home_ojkastl_buildservice_patroni'
-        repository_baseurl: 'https://download.opensuse.org/repositories/home:/ojkastl_buildservice:/Patroni/15.3'
-    - role: 'install_one_or_more_packages'
-      vars:
-        packages_to_be_installed:
-          - 'patroni'
-          - 'postgresql12'
-          - 'postgresql12-server'
-
-  tasks:
-
-    - name: 'Create directory /opt/patroni/'
-      file:
-        path: '/opt/patroni/'
-        state: 'directory'
-        owner: 'postgres'
-        group: 'postgres'
-        mode: '0700'
-
-    - name: 'Create directory /opt/patroni/patroni'
-      file:
-        path: '/opt/patroni/patroni'
-        state: 'directory'
-        owner: 'postgres'
-        group: 'postgres'
-        mode: '0700'
-
-    - name: 'Create /etc/patroni.yml'
-      template:
-        src: 'patroni.yml.j2'
-        dest: '/etc/patroni.yml'
-        owner: 'postgres'
-        group: 'postgres'
-        mode: '0600'
-      notify:
-        - 'restart patroni'
-
-    - name: 'Create /etc/systemd/system/patroni.service'
-      template:
-        src: 'patroni.service.j2'
-        dest: '/etc/systemd/system/patroni.service'
-        owner: 'root'
-        group: 'root'
-        mode: '0644'
-      notify:
-        - 'Trigger systemctl daemon-reload'
-
-    - name: 'Flush handlers to trigger the systemctl daemon-reload, if needed'
-      meta: flush_handlers
-
-    - name: 'Start and enable patroni'
-      service:
-        name: 'patroni.service'
-        state: 'started'
-        enabled: 'true'
-
-  handlers:
-
-    - name: 'restart patroni'
-      ansible.builtin.service:
-        name: 'patroni.service'
-        state: 'restarted'
-
-    - name: 'Trigger systemctl daemon-reload'
-      ansible.builtin.systemd:
-        daemon_reload: 'yes'
+        postgres_version: '12'
+        patroni_servers_group: 'patroni_nodes'
+        etcd_servers_group: 'etcd_nodes'
+        patroni_bootstrap_users:
+          - name: 'admin'
+            password: 'admin'
+            options:
+              - createrole
+              - createdb
+        patroni_postgresql_authentication:
+          - name: 'replication'
+            username: 'replicator'
+            password: 'password'
+          - name: 'superuser'
+            username: 'postgres'
+            password: 'password'
+        patroni_tags:
+          nofailover: 'false'
+          noloadbalance: 'false'
+          clonefrom: 'false'
+          nosync: 'false'

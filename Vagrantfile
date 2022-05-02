@@ -24,33 +24,6 @@ Vagrant.configure("2") do |config|
   end # config.vm.define
 
   ###################################################################################
-  # define number of etcd nodes
-  E = 1
-
-  # provision E VMs as nodes
-  (1..E).each do |i|
-
-    # name the VMs
-    config.vm.define "etcd#{i}" do |node|
-
-      # which image to use
-      node.vm.box = "SLE15-SP3"
-      node.vm.box_check_update = false
-
-      # sizing of the VMs
-      node.vm.provider "libvirt" do |lv|
-        lv.random_hostname = false
-        lv.memory = 1024
-        lv.cpus = 1
-      end
-
-      # set the hostname
-      node.vm.hostname = "etcd#{i}"
-
-    end # config.vm.define nodes
-  end # each-loop over all VMs
-
-  ###################################################################################
   # define number of patroni/postgres nodes
   P = 2
 

@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
 
   ###################################################################################
   # define number of patroni/postgres nodes
-  P = 2
+  P = 3
 
   # provision W VMs as nodes
   (1..P).each do |i|
@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
           ansible.compatibility_mode = "2.0"
           ansible.limit = "all"
           ansible.groups = {
-            "patroni_nodes"  => [ "patroni1", "patroni2" ],
+            "patroni_nodes"  => [ "patroni1", "patroni2", "patroni3" ],
             "etcd_nodes"  => [ "etcd1" ],
             "haproxy_server"  => [ "haproxy" ],
           }

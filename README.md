@@ -1,6 +1,8 @@
 # patroni_vagrant_libvirt_ansible_on_SLES15
 
-This Vagrant setup creates all that you need to start playing with [Patroni](https://github.com/zalando/patroni/). This means we have two Patroni nodes, one single node running etcd and another one running a haproxy, loadbalancing your PostgreSQL cluster. 
+This Vagrant setup creates all that you need to start playing with [Patroni](https://github.com/zalando/patroni/). This means we have three VMs running Patroni, postgreSQL and etcd and another VM running haproxy, loadbalancing your PostgreSQL cluster.
+
+Patroni uses the etcd cluster, running on the same three nodes, to store the state of the PostgreSQL cluster.
 
 Default OS is SLES15 SP3, but that can be changed in the Vagrantfile. Please beware, this might break the ansible provisioning which was only tested with SLES15 SP3.
 
@@ -8,6 +10,7 @@ Default OS is SLES15 SP3, but that can be changed in the Vagrantfile. Please bew
 
 ## Vagrant
 
+0. Make sure your system meets the requirements for the VMs RAM. If not, feel free to reduce the size of the Patroni nodes (default `4096` MB).
 1. You need vagrant obviously. And ansible. And git...
 2. Fetch the box from [Suse](https://www.suse.com/download/sles/) by following the instructions on the page (TL;DR: download, `vagrant box add --name SLE15-SP3 SLE*Vagrant*.box`, done)
 3. Make sure the git submodules are fully working by issuing `git submodule init && git submodule update`
@@ -25,8 +28,8 @@ In case you do not want Ansible to install teleport (because you want to install
           ansible.compatibility_mode = "2.0"
           ansible.limit = "all"
           ansible.groups = {
-            "patroni_nodes"  => [ "patroni1", "patroni2" ],
-            "etcd_nodes"  => [ "etcd1" ],
+            "patroni_nodes"  => [ "patroni1", "patroni2", "patroni3" ],
+            "etcd_nodes"  => [ "patroni1", "patroni2", "patroni3" ],
             "haproxy_server"  => [ "haproxy" ],
           }
           ansible.playbook = "ansible/playbook-vagrant.yml"

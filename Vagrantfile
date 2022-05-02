@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
           ansible.limit = "all"
           ansible.groups = {
             "patroni_nodes"  => [ "patroni1", "patroni2", "patroni3" ],
-            "etcd_nodes"  => [ "etcd1" ],
+            "etcd_nodes"  => [ "patroni1", "patroni2", "patroni3" ],
             "haproxy_server"  => [ "haproxy" ],
           }
           ansible.playbook = "ansible/playbook-vagrant.yml"
